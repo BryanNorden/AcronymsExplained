@@ -18,3 +18,27 @@
         <img src="http://img.shields.io/badge/swift-4.1-brightgreen.svg" alt="Swift 4.1">
     </a>
 </center>
+
+This is an API server and web app written in Swift with the Vapor web framework
+
+## Requirements
+* Swift 4.1 - <a href="https://swift.org/download/">https://swift.org/download/</a>
+* Vapor - <a href="https://vapor.codes/">https://vapor.codes/</a>
+* Xcode 9.2 or greater
+* Docker - <a href="https://www.docker.com/docker-mac">https://www.docker.com/docker-mac</a>
+
+## Instructions
+1. Install all requirements
+1. Download or clone repository
+1. Open terminal and cd to location
+1. Setup a MySQL Database in a Docker container
+    
+    `docker run --name mysql -e MYSQL_USER=root -e MYSQL_PASSWORD=password -e MYSQL_DATABASE=vapor -p 3306:3306 -d mysql/mysql-server`
+    
+ 1. Check to see if database is running
+
+    `docker exec -it mysql mysql -u root -ppassword`
+    
+ 1. Build Xcode project via Terminal with Vapor command
+
+    `vapor xcode -y`
